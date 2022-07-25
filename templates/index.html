@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>
+		Appointment Schedular For pathology Sample Collection 
+	</title>
+	<style>
+		body {
+			
+    background-image: url("./img/img.jpeg");
+    text-align: center;
+    /* background-repeat: no-repeat !important; */
+    background-attachment: fixed;
+    background-position: center;
+}
+
+	</style>
+</head>
+
+<body>
+  
+       
+		<section>
+				<div class="content">
+					<h1 style="font-family:verdana ">Appointment Schedular For Sample Collection  </h1>
+				
+					<form action="/predict" method="POST">
+
+						<div class="sec1">
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Patient Gender</h5>
+											<!-- Patient Gender -->
+											<select name="Gender" id="Gender" required="required">
+												<option value="1">Male</option>
+												<option value="0">Female</option>
+
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="card">
+										<div class="card-body">
+											<h5 class="card-title">Time slot</h5>
+											<!-- Test_Name  -->
+											<select name="Time slot" id="Time slot" required="required">
+												<option value="1">06:00 to 21:00 (Home)</option>
+												<option value="2">19:00 to 22:00 (working person)</option>
+												<option value="0">06:00 to 18:00 (Collect at work place)</option>
+												
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="card">
+										<div class="card-body">
+											
+											<!-- Sample Type -->
+											<h5 class="card-title">Agent ID</h5>
+    										 <input id="Agent ID" name="Agent ID" type="number "
+                                            required="required">
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title">Specimen Storage</h5>
+										<!-- Way_Of_Storage_Of_Sample -->
+										<select name="Way_Of_Storage_Of_Sample" id="Way_Of_Storage_Of_Sample"
+											required="required">
+											<option value="2">Vaccum blood collection tube</option>
+											<option value="1">Urine culture transport tube</option>
+                                            <option value="0">Disposable plastic container</option>
+										</select>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="card">
+										<div class="card-body">
+											<!--Test_Booking_Time_HH_MM -->
+											<h5 class="card-title">Distance Patient-Agent : </h5>
+											<input id="Distance Patient-Agent" name="Distance Patient-Agent" type="number "
+                                            required="required">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="card">
+									<div class="card-body">
+										<!--Scheduled_Sample_Collection_Time_HH_MM -->
+										<h5 class="card-title">Specimen collection Time MM:</h5>
+										 <input id="Specimen collection Time" name="Specimen collection Time" type="number "
+                                        required="required">
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="sec1">
+							<div class="col-sm-6">
+								<div class="card">
+									<div class="card-body">
+										
+										<!-- Cut_off_Schedule Type -->
+										<h5 class="card-title">Exact Arrival Time</h5>
+										 <input id="Exact Arrival Time" name="Exact Arrival Time" type="number "
+                                        required="required">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6">
+									
+										<div class="card-body">
+											<!--Cut_off_time_HH_MM -->
+											<h5 class="card-title">Patient Availabilty From:</h5>
+											<input id="Patient Availabilty From" name="Patient Availabilty From" type="number "
+                                              required="required">
+										</div>
+									
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="card">
+										<div class="card-body">
+											
+											<!--  Traffic_Conditions -->
+											<h5 class="card-title">Patient Availabilty To :</h5>
+											<input id="Patient Availabilty To" name="Patient Availabilty To" type="number "
+                                              required="required">
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						<center style="padding: 20px;">
+						 
+			            	<button type="submit" class="btn btn-outline-primary btn-lg">Predict</button>
+                                <h1 class="navbar-brand">{{ output }}</h1>
+							
+							<p><i>©2022 Pramod Chavan</i></p>
+						</center>
+						
+						
+						
+				</div>
+		</div>
+	</div>
+
+
+	</section>
+	    
+		<style>
+			
+			section {
+				
+				background-image: linear-gradient(#ffd89b, #195b );
+				
+			}
+			
+			
+		
+</body>
+
+</html>
